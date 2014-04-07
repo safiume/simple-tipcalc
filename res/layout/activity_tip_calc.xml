@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tipcalc.TipCalc" >
+
+    <EditText
+        android:id="@+id/etValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/etValue" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAdquateService"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnOtherService"
+        android:layout_alignBottom="@+id/btnOtherService"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="onSubmit"
+        android:text="@string/btnAdquateService" />
+
+    <Button
+        android:id="@+id/btnBstService"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAdquateService"
+        android:layout_alignBottom="@+id/btnAdquateService"
+        android:layout_toRightOf="@+id/btnAdquateService"
+        android:onClick="onSubmit"
+        android:text="@string/btnBstService" />
+
+    <Button
+        android:id="@+id/btnOtherService"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etValue"
+        android:layout_marginTop="87dp"
+        android:layout_toLeftOf="@+id/btnAdquateService"
+        android:onClick="onSubmit"
+        android:text="@string/btnOtherService" />
+
+    <TextView
+        android:id="@+id/TipPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAdquateService"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="73dp"
+        android:layout_toLeftOf="@+id/tipLabel"
+        android:text="@string/TipPrompt"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TipPrompt"
+        android:layout_alignBottom="@+id/TipPrompt"
+        android:layout_alignRight="@+id/etValue"
+        android:text="@string/tipLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
