@@ -64,7 +64,7 @@ public class TipCalc extends Activity {
 		// Return the structure of the object that was clicked 
 		// and grab it's text label to determine the tip percent
 		
-			 Button clickedButton = (Button) findViewById(v.getId());
+			 Button clickedButton = (Button) v;
 			 tipButton = clickedButton.getText().toString();
 
 		// Handle % and spaces before the % if any
